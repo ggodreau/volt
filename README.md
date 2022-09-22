@@ -8,6 +8,9 @@ just serves as a forkable/versionable repo for future updates and collaboration_
 
 [Video Guide](https://www.youtube.com/watch?v=2A2cehoaXe4)
 
+[![SHVCS Fix](https://img.youtube.com/vi/2A2cehoaXe4/0.jpg)](https://www.youtube.com/watch?v=2A2cehoaXe4)
+
+
 ---
 ### Binaries
 
