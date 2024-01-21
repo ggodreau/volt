@@ -176,6 +176,7 @@ _You need to have an active “Service Programming System (SPS2)” subscription
 _I did not fully complete this step in the video because I already reprogrammed my vehicle_
 
 * Click “Next”
+* This is where the VIN assignment to your subscription happens. You will see a message that says "Warning: The current vehicle will take one of your available VIN Slots." Select the “Proceed” button and your ACDelco subscription will be updated.
 * Select “Battery Energy Control Module” and click next
 * Continue to click next until the software begins to reprogram the vehicle. Don’t do anything until it completely finishes.
   * The reprogramming in this step took about 12 minutes for my car. But, your time may vary.
