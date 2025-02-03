@@ -23,9 +23,10 @@ just serves as a forkable/versionable repo for future updates and collaboration_
 Notes:
 * The VCX site has two VXDIAG GM zip files, `GDS2.zip` and `GDS2Patch.zip` - the patch contains the trojan and doesn't seem to need to be applied for GDS2 to run within TLC. If needed, you can download the patch [here](https://mega.nz/file/oZ820RCJ#BXRW3mOGCC7mfMjtaJ71AzjwghBlCogoM7RNGWi9KmE)
 * TechLineConnect only becomes available to download after the _Vehicle Programming Software_ license is purchased through [ACDelco's website](https://www.acdelcotds.com/subscriptions#)
-* [Tech2Win v16.02.24](https://mega.nz/#!tIFWUIxT!XBAFZWEFPhQ3A9MtyPYfT1wojVgB1sEmt2T62nrmQcM) is not needed for reprogramming modules, or for diagnostic monitoring
+* [Tech2Win v16.02.24](https://mega.nz/#!tIFWUIxT!XBAFZWEFPhQ3A9MtyPYfT1wojVgB1sEmt2T62nrmQcM) is not needed for reprogramming modules, or for diagnostic monitoring. 
 * An active internet connection is needed to flash modules in the car, but is not needed to view DTCs and engine data with GDS2 (this can be done offline, and also using the VCX Nano local wifi AP)
 * TLC, when used to reprogram/flash, is bootstrapped from a magic web link on ACDelco's website that provides an auth token to the software that links to your license (there is no local login to the desktop application). This was tested with Microsoft Edge within windows 10. Do not use Chrome, etc. TLC also dynamically downloads firmware from GM servers, depending on your VIN/configuration, when reprogramming occurs.
+* DO NOT INSTALL VXDIAG's CRACKED GDS2 ON THE SAME HOST MACHINE AS TECHLINE CONNECT, THIS WILL RESULT IN [GM BANNING YOUR SUBSCRIPTION](https://vxdiag.com/blogs/blog/how-to-avoid-vxdiag-vcx-nano-gm-being-banned-by-acdelco). Install only the official passthru driver in J2534 mode if you need the host machine for interactive flashing via GM remote servers.
 
 ---
 
@@ -141,20 +142,22 @@ _You need to have an active “Service Programming System (SPS2)” subscription
   * When the screen says “New USB Device Detected”
     * Select “Connect to a virtual machine,” click the virtual machine from the list, and continue
 * Click finish
+ 
+#### Step 9: Install Techline Connect (14:28) (note out of order timestamp)
 
-#### Step 9: Set up VX Manager (12:52)
+* IMPORTANT!!! THIS MUST BE DONE BEFORE SETTING UP VX MANAGER, see [here](https://vxdiag.com/blogs/blog/how-to-avoid-vxdiag-vcx-nano-gm-being-banned-by-acdelco) and [here](https://github.com/ggodreau/volt/issues/3#issue-2101581582)
+* Click on the TLCInstaller file you downloaded in step 7 and install the software
+* Once you get to the login screen, close Techline Connect. It might take a few tries for the program to close.
+* Go back to the TLC Admin Console webpage from step 7 and click “Launch Techline Connect”
+* Continue the installation process. Techline Connect should launch when it’s finished.
+
+
+#### Step 10: Set up VX Manager (12:52) (note out of order timestamp)
 
 * Click “Firmware,” toggle the update on (if not already), and click “Upgrade.” Close the pop-up window when it finishes.
   * Edit: You might want to skip this step if you’re using an older version of VX Manager like 1.8.4, but try updating if you have problems.
 * Click “Update License” and wait for it to finish.
 * Click “Diagnostic” and then “PASSTHRU.” Click Install. When it finishes, close the window and close VX Manager.
-
-#### Step 10: Install Techline Connect (14:28)
-
-* Click on the TLCInstaller file you downloaded in step 7 and install the software
-* Once you get to the login screen, close Techline Connect. It might take a few tries for the program to close.
-* Go back to the TLC Admin Console webpage from step 7 and click “Launch Techline Connect”
-* Continue the installation process. Techline Connect should launch when it’s finished.
 
 #### Step 11: Prepare for vehicle programming (18:36)
 
